@@ -93,9 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-$(document).ready(function () {
-  alert('Ciao Mondo');
-});
+$(document).ready(function () {});
 
 /***/ }),
 
