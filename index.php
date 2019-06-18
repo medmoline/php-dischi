@@ -19,30 +19,61 @@ include 'data.php';
   <head>
     <link rel="stylesheet" href="public/css/app.css" type="text/css">
     <meta charset="utf-8">
+    script <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js" charset="utf-8"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title></title>
   </head>
   <body>
+  <!-- MILESTONE A
     <div class="card_container">
-    <?php
-      foreach ($artisti as $key => $value) {?>
+    <-!?php
+      // foreach ($artisti as $key => $value) {?>
         <div class="card">
           <div class="img_container">
-            <img src="<?php echo $value['copertina']; ?>" alt="">
+            <img src="<-!?php echo $value['copertina']; ?>" alt="">
           </div>
           <div class="content">
             <ul>
-              <li><?php echo $value['album']; ?></li>
-              <li><?php echo $value['artista']; ?></li>
-              <li><?php echo $value['anno']; ?></li>
+              <li><-!?php echo $value['album']; ?></li>
+              <li><-!?php echo $value['artista']; ?></li>
+              <li><-!?php echo $value['anno']; ?></li>
             </ul>
           </div>
         </div>
-      <?php };
+      <-!?php };
 
         ?>
 
     </div>
+    -->
+    <!--MILESTONE B-->
+    <header>
+      <div class="header_container">
+        <div class="logo">
+          <img src="https://developer.spotify.com/assets/branding-guidelines/icon3@2x.png" alt="">
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="card_container">
+        <!--Struttura Handlebars-->
+      </div>
+    </section>
+    <script id="entry-template" type="text/x-handlebars-template">
+      <div class="card">
+        <div class="img_container">
+          <img src="{{copertina}}" alt="">
+        </div>
+        <div class="content">
+          <ul>
+            <li>{{album}}</li>
+            <li>{{artista}}</li>
+            <li>{{anno}}</li>
+
+          </ul>
+        </div>
+      </div>
+    </script>
      <script src="src/js/app.js" charset="utf-8"></script>
   </body>
 </html>

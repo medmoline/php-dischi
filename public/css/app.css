@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+.header_container {
+  height: 75px;
+  background-color: black;
+  width: 65%;
+  margin: 0 auto;
+}
+
 .card_container {
   width: 65%;
   margin: 20px auto;
@@ -35,7 +42,7 @@
   height: 150px;
 }
 
-.card ul li {
+.card .card ul li {
   color: black;
   list-style-type: none;
 }

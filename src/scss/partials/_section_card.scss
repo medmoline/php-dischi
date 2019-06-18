@@ -1,3 +1,14 @@
+.card_container{
+  width:65%;
+  margin:20px auto;
+
+    &:after{
+      display:table;
+      clear:both;
+
+    }
+}
+
 .card {
    width :200px;
    height: 250px;
@@ -17,9 +28,9 @@
       height:150px;
     }
   }
-}
 
-.card ul li{
+  .card ul li{
   color:black;
   list-style-type: none;
+  }
 }
