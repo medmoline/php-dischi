@@ -19,7 +19,7 @@ include 'data.php';
   <head>
     <link rel="stylesheet" href="public/css/app.css" type="text/css">
     <meta charset="utf-8">
-    script <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js" charset="utf-8"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js" charset="utf-8"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title></title>
   </head>
@@ -49,12 +49,15 @@ include 'data.php';
     <!--MILESTONE B-->
     <header>
       <div class="header_container">
-        <div class="logo">
-          <img src="https://developer.spotify.com/assets/branding-guidelines/icon3@2x.png" alt="">
+        <div class="container">
+          <div class="logo">
+            <img src="https://developer.spotify.com/assets/branding-guidelines/icon3@2x.png" alt="">
+          </div>
         </div>
-      </div>
+        </div>
+
     </header>
-    <section>
+    <section class="grey">
       <div class="card_container">
         <!--Struttura Handlebars-->
       </div>
@@ -66,9 +69,9 @@ include 'data.php';
         </div>
         <div class="content">
           <ul>
-            <li>{{album}}</li>
-            <li>{{artista}}</li>
-            <li>{{anno}}</li>
+            <li>Album: <span>{{album}}</span></li>
+            <li>Artista: <span>{{artista}}</span></li>
+            <li>Anno: <span>{{anno}}</span></li>
 
           </ul>
         </div>

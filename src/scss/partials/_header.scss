@@ -1,7 +1,18 @@
 .header_container{
   height:75px;
   background-color:black;
-  width:65%;
-  margin:0 auto;
+  width:100%;
 
+
+    .container{
+      @include center(65%);
+    }
+
+    .logo{
+      @include img(15%,75px);
+
+        img{
+          @include img(75px,75px);
+        }
+    }
 }
