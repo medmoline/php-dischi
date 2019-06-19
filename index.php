@@ -53,6 +53,11 @@ include 'data.php';
           <div class="logo">
             <img src="https://developer.spotify.com/assets/branding-guidelines/icon3@2x.png" alt="">
           </div>
+          <div class="select_container">
+            <select class="" name="">
+              <option> Artisti </option>
+            </select>
+          </div>
         </div>
         </div>
 
@@ -69,10 +74,15 @@ include 'data.php';
         </div>
         <div class="content">
           <ul>
-            <li>Album: <span>{{album}}</span></li>
-            <li>Artista: <span>{{artista}}</span></li>
-            <li>Anno: <span>{{anno}}</span></li>
-
+            <li>
+              Album: <span>{{album}}</span>
+            </li>
+            <li>
+              Artista: <span>{{artista}}</span>
+            </li>
+            <li>
+              Anno: <span>{{anno}}</span>
+            </li>
           </ul>
         </div>
       </div>

@@ -1,18 +1,33 @@
 .header_container{
-  height:75px;
-  background-color:black;
-  width:100%;
+
+background-color:black;
+@include dim(100%,$header_height);
 
 
-    .container{
-      @include center(65%);
+  .container{
+    @include center(65%);
+
+    &:after{
+      @include after;
     }
 
     .logo{
       @include dim(15%,75px);
+      float:left;
 
-        img{
-          @include dim(75px,75px);
-        }
+      img{
+        @include dim(75px,75px);
+      }
     }
+
+    .select_container{
+      float:right;
+      width:30%;
+      line-height:$header_height;
+
+      select{
+          width:70%;
+      }
+    }
+  }
 }

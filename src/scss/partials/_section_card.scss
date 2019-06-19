@@ -12,8 +12,8 @@
 }
 
 .card {
-   width :200px;
-   height: 275px;
+
+   @include dim(200px,300px);
    border: 2px solid black;
    background-color:black;
    border-radius :5px;

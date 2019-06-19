@@ -10,7 +10,7 @@
   clear:both;
 }
 
-@mixin dim($width,$height) {
+@mixin dim ($width,$height) {
   width:$width;
   height:$height;
 }
