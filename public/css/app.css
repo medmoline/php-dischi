@@ -32,18 +32,24 @@
   height: 75px;
 }
 
-.header_container .container .select_container {
+.header_container .container .input_container {
   float: right;
-  width: 30%;
+  width: 40%;
   line-height: 75px;
 }
 
-.header_container .container .select_container select {
-  width: 70%;
+.header_container .container .input_container input {
+  width: 80%;
+  height: 25px;
+}
+
+.header_container .container .input_container button {
+  padding: 5px 10px;
 }
 
 .grey {
   background-color: #252727;
+  height: 100vh;
 }
 
 .card_container {

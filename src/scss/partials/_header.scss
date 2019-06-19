@@ -20,13 +20,17 @@ background-color:black;
       }
     }
 
-    .select_container{
+    .input_container{
       float:right;
-      width:30%;
+      width:40%;
       line-height:$header_height;
 
-      select{
-          width:70%;
+      input{
+        width:80%;
+        height:25px;
+      }
+      button{
+        padding: 5px 10px;
       }
     }
   }

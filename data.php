@@ -63,6 +63,7 @@ $artisti = [
   ]
 ];
 
+
   if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
   // restituisco ad ajax in formato json l'array dei todo
     echo json_encode($artisti);

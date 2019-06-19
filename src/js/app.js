@@ -1,44 +1,81 @@
 var $ = require('jquery');
 
 $(document).ready(function() {
-
-chiamata_get();
-
-})
-
-function chiamata_get(){
-  // //chiamata ajax per portare i dati in get tra php e javascript
-  $.ajax({
-  'url': 'http://localhost:8888/playground/php-dischi/data.php',
-  'method': 'GET',
-  'success': function(data) {
-      stampa_card(data);
-      filtra_dati(data);
-
-
-  },
-  'error': function() {
-    alert('si è verificato un errore');
-  }
-});
-}
-
-function stampa_card(array) {
+  //struttura per handlebars
   var source   = $("#entry-template").html();
   var template = Handlebars.compile(source);
+  chiamata_get();
 
-  var todos = JSON.parse(array);
-  for (var i = 0; i < todos.length; i++) {
-    //struttura handlebars
-    var context = {
-      'copertina': todos[i].copertina,
-      'album': todos[i].album,
-      'artista':todos[i].artista,
-      'anno':parseInt(todos[i].anno)
+  //intercetto il click sul bottone
+  $('.btn').click(function() {
+    $('.card_container').html('');
+    var testo = $('.search').val();
+    search(testo);
+  })
 
-    };
-    var html = template(context);
-    //appendo al contenitore delle card la struttura di handlebars
-    $('.card_container').append(html);
+
+  function chiamata_get(){
+    // //chiamata ajax per portare i dati in get tra php e javascript
+      $.ajax({
+      'url': 'http://localhost:8888/playground/php-dischi/data.php',
+      'method': 'GET',
+      'success': function(data) {
+        //converto i dati presi da php
+        var todos = JSON.parse(data);
+        //ciclo l'array e stampo tutto a schermo 
+        for (var i = 0; i < todos.length; i++) {
+          var todo = todos[i];
+          stampa_card(todo);
+        }
+      },
+      'error': function() {
+        alert('si è verificato un errore');
+      }
+    });
   }
-}
+
+  function stampa_card(array) {
+    //struttura handlebars per card
+    var context ={
+      'copertina':array.copertina,
+      'artista':array.artista,
+      'album':array.album,
+      'anno':array.anno
+    }
+    var html = template(context);
+    $('.card_container').append(html);
+
+  }
+//funzione per cercare album e testi
+  function search(testo){
+      $.ajax({
+      'url': 'http://localhost:8888/playground/php-dischi/data.php',
+      'method': 'GET',
+      'success': function(data) {
+        //converto i dati presi da php
+      var todos = JSON.parse(data);
+      //ciclo tutto l'array
+      for (var i = 0; i < todos.length; i++) {
+        var todo = todos[i];
+        //variabile per non convertire l'album in minuscolo
+        var album_cors = todo.album.toLowerCase();
+        //identica variabile per l'artista
+        var artista_cors = todo.artista.toLowerCase();
+        //se l'album è incluso
+        if (album_cors.includes(testo)) {
+          //stampi tutto
+            stampa_card (todo);
+          }
+          else if (artista_cors.includes(testo)) {
+            //altrimenti se è incluso negli artisti stampi tutto
+            stampa_card (todo);
+          }
+        }
+      },
+      'error': function() {
+        alert('si è verificato un errore');
+      }
+    });
+  }
+
+})
