@@ -20,7 +20,7 @@ include 'data.php';
     <link rel="stylesheet" href="public/css/app.css" type="text/css">
     <meta charset="utf-8">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js" charset="utf-8"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
     <title></title>
   </head>
   <body>
@@ -77,6 +77,6 @@ include 'data.php';
         </div>
       </div>
     </script>
-     <script src="src/js/app.js" charset="utf-8"></script>
+     <script src="public/js/app.js" charset="utf-8"></script>
   </body>
 </html>

@@ -1,8 +1,11 @@
+var $ = require('jquery');
+
 $(document).ready(function() {
-  //dichiaro le variabili iniziai di handlebars
+  alert('Ciao Mondo');
+//   //dichiaro le variabili iniziai di handlebars
   var source   = $("#entry-template").html();
   var template = Handlebars.compile(source);
-//chiamata ajax per portare i dati in get tra php e javascript
+// //chiamata ajax per portare i dati in get tra php e javascript
   $.ajax({
   'url': 'http://localhost:8888/playground/php-dischi/data.php',
   'method': 'GET',

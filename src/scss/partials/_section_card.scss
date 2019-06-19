@@ -26,7 +26,7 @@
 
 
     img{
-      @include img(100%,150px);
+      @include dim(100%,150px);
     }
   }
 

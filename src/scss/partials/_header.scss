@@ -9,10 +9,10 @@
     }
 
     .logo{
-      @include img(15%,75px);
+      @include dim(15%,75px);
 
         img{
-          @include img(75px,75px);
+          @include dim(75px,75px);
         }
     }
 }

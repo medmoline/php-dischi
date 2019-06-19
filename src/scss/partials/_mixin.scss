@@ -9,7 +9,8 @@
   content:'';
   clear:both;
 }
-@mixin img($width,$height) {
+
+@mixin dim($width,$height) {
   width:$width;
   height:$height;
 }
