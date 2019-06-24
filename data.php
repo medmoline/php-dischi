@@ -1,6 +1,6 @@
 <?php
 //definisco array con gli artisti
-$artisti = [
+$dischi = [
   [
   'copertina'=>'https://www.covercentury.com/covers/audio/q/Queen_-_Live_At_Wembley__86-front.jpg',
   'album'=>'Live At Wembley',
@@ -64,8 +64,4 @@ $artisti = [
 ];
 
 
-  if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-  // restituisco ad ajax in formato json l'array dei todo
-    echo json_encode($artisti);
-  }
  ?>

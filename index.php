@@ -49,17 +49,18 @@ include 'data.php';
     <!--MILESTONE B-->
     <header>
       <div class="header_container">
-        <div class="container">
-          <div class="logo">
-            <img src="https://developer.spotify.com/assets/branding-guidelines/icon3@2x.png" alt="">
-          </div>
-          <div class="input_container">
-            <input class="search" type="text" name="" value="" placeholder="Cerca...">
-            <button class="btn" type="submit" name="button">Cerca</button>
+          <div class="container">
+            <div class="logo">
+              <img src="https://developer.spotify.com/assets/branding-guidelines/icon3@2x.png" alt="">
+            </div>
+            <div class="input_container">
+              <select class="select" name="">
+                <option>Seleziona Artista</option>
+              </select>
+            </div>
+            <button class="ordina" type="submit" name="button">Ordina</button>
           </div>
         </div>
-        </div>
-
     </header>
     <section class="grey">
       <div class="card_container">
@@ -85,6 +86,9 @@ include 'data.php';
           </ul>
         </div>
       </div>
+    </script>
+    <script id="template_artista" type="text/x-handlebars-template">
+      <option value="{{ nome_artista }}">{{ nome_artista }}</option>
     </script>
      <script src="public/js/app.js" charset="utf-8"></script>
   </body>

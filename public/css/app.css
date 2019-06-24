@@ -34,12 +34,12 @@
 
 .header_container .container .input_container {
   float: right;
-  width: 40%;
+  width: 50%;
   line-height: 75px;
 }
 
-.header_container .container .input_container input {
-  width: 80%;
+.header_container .container .input_container select {
+  width: 50%;
   height: 25px;
 }
 
@@ -49,16 +49,16 @@
 
 .grey {
   background-color: #252727;
-  height: 100vh;
+  height: 100%;
 }
 
-.card_container {
+.grey .card_container {
   width: 70%;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.card_container:after {
+.grey .card_container:after {
   display: table;
   content: "";
   clear: both;

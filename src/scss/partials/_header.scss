@@ -22,11 +22,11 @@ background-color:black;
 
     .input_container{
       float:right;
-      width:40%;
+      width:50%;
       line-height:$header_height;
 
-      input{
-        width:80%;
+      select{
+        width:50%;
         height:25px;
       }
       button{
